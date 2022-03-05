@@ -11,18 +11,11 @@
  *
  * 公司的业务千篇一律，复杂的代码好几百行。
  */
-import { MenuTypeArr } from "../../../wash-painting-ui";
 import { ref } from "vue";
 import { useRouter } from "nuxt3/app";
+import { menu } from "~/config/menu.config";
 
-const menuList = ref<MenuTypeArr>([
-  { title: '首页', key: 'main', isActive: true },
-  {
-    title: '组件', key: 'components/input', isActive: false, children: [
-      { title: '输入框', key: 'components/input', isActive: true },
-    ]
-  }
-]);
+const menuList = ref(menu);
 
 const router = useRouter();
 const clickMenu = (index: number[]) => {
