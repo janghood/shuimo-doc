@@ -1,6 +1,6 @@
 <template>
   <div class="wash-painting-ui w-cursor">
-    <Title>水墨组件官网</Title>
+    <Title>水墨UI</Title>
     <div class="layout">
       <Header :show-index-button="showIndexButton"/>
       <NuxtLayout>
@@ -22,10 +22,9 @@ const showIndexButton = computed(()=>{
 
 useMeta({
   meta: [
-    { name: 'author', content: '阿怪' },
-    { name: 'description', content: '' },
-    { name: 'keywords', content: '' },
-    { name: 'referrer', content: 'no-referrer' },
+    { name: 'author', content: '极客江湖,阿怪,higuaifan' },
+    { name: 'description', content: '一款粗暴的水墨UI' },
+    { name: 'keywords', content: '水墨,ui,design,UI,UI design,丹青,wash painting,danqing' },
   ]
 })
 </script>
