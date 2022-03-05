@@ -2,7 +2,7 @@
   "name": "wash-painting-doc",
   "author": "阿怪",
   "version": "1.0.0",
-  "description": "水墨组件的官网",
+  "description": "水墨UI",
   "private": true,
   "scripts": {
     "dev": "nuxi dev",
