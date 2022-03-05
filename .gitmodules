@@ -1,0 +1,3 @@
+[submodule "blog-service"]
+	path = blog-service
+	url = git@github.com:higuaifan/blog-service.git
