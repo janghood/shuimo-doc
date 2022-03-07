@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home menu-right">
     <header>
       <img alt="" src="/img/base/logo.png">
       <h1>一款水墨组件</h1>
@@ -32,8 +32,6 @@
 <style lang="scss" scoped>
 
 .home {
-  margin-right: 22px;
-
   header {
     text-align: center;
   }
