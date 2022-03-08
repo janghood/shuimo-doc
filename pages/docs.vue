@@ -1,5 +1,5 @@
 <template>
-  <div class="docs">
+  <div class="docs menu-right">
     <NuxtPage/>
   </div>
 </template>
