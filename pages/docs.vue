@@ -19,4 +19,8 @@
 
 <style lang="scss" scoped>
 
+.docs{
+  overflow-y: auto;
+}
+
 </style>
