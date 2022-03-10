@@ -2,18 +2,24 @@
   <div>
     <h1>颜色</h1>
     <br/>
+    <BaseTitle>文字</BaseTitle>
+    <ColorPresenter color="text">瓦罐灰</ColorPresenter>
+    <ColorPresenter color="text-disabled">嫩灰</ColorPresenter>
+    <ColorPresenter color="text-dark">钢蓝</ColorPresenter>
+    <BaseTitle>分割线</BaseTitle>
+    <ColorPresenter color="divider">0.2钢蓝</ColorPresenter>
+    <BaseTitle>边框</BaseTitle>
+    <ColorPresenter color="border">鱼尾灰</ColorPresenter>
+    <BaseTitle>按钮</BaseTitle>
+    <ColorPresenter color="text">瓦罐灰</ColorPresenter>
+    <BaseTitle>提醒</BaseTitle>
+    <ColorPresenter color="warn">谷黄</ColorPresenter>
+    <BaseTitle>正确</BaseTitle>
+    <ColorPresenter color="success">美蝶绿</ColorPresenter>
+    <BaseTitle>警告</BaseTitle>
+    <ColorPresenter color="error">赭石</ColorPresenter>
 
-    <BaseTitle>青色</BaseTitle>
-    <ColorPresenter color="canglv">苍绿</ColorPresenter>
-    <BaseTitle>红色</BaseTitle>
-    <ColorPresenter color="yanzhihong">胭脂红</ColorPresenter>
-    <ColorPresenter color="zhuhong">朱红</ColorPresenter>
-    <BaseTitle>黄色</BaseTitle>
-    <ColorPresenter color="zhizihuang">栀子黄</ColorPresenter>
-    <ColorPresenter color="liuhuanghuang">硫磺黄</ColorPresenter>
-    <BaseTitle>黑色</BaseTitle>
-    <ColorPresenter color="qinghui">青灰</ColorPresenter>
-    <ColorPresenter color="huanghunhui">黄昏灰</ColorPresenter>
+
   </div>
 </template>
 
