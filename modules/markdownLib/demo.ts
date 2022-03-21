@@ -7,6 +7,7 @@
  * 公司的业务千篇一律，复杂的代码好几百行。
  */
 import * as fs from 'fs';
+import { resetCode } from "./code/parseCode";
 
 const searchValue = /:::\s*demo\s+([\\/.\w-]+)/g;
 const insertSearchValue = /<p>:::\s*demo\s+([\\/.\w-]+)<\/p>/g;
@@ -17,31 +18,6 @@ const pathTransform = (str: string) => {
 
 export default function demo() {
   const importMap = new Map();
-  importMap.set('PrismCode', "import PrismCode from '/components/code/PrismCode.vue'")
-  
-  const resetCode = (code: string) => {
-    const templateList = code.split('<template>'); // 为了获取最前面的<template>
-    const [preTemplate, ...endTemplate] = templateList;
-    const data = endTemplate.join('<template>');
-    const leftTemplateList = data.split('</template>');
-    const leftTemplateListTemp = leftTemplateList.concat(); // 备份
-    const leftTemplateListPre = leftTemplateListTemp.splice(-1, 1); //后面</template>前的内容
-    
-    const left = leftTemplateListPre.join('</template>');
-    const template = leftTemplateListTemp.join('</template>');
-    
-    let temp = code;
-    temp = temp.replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/\{/g, '&#123;')
-      .replace(/\}/g, '&#125;')
-      .replace(/\'/g, '&#39;')
-      .replace(/\"/g, '&quot;');
-    return `<div class="code-div">
-      <PrismCode type="html" languageType="html" :code="&#x60;${temp}&#x60;"/>
-    </div>`;
-  }
 
   /**
    * 用于在md中查找 :::demo [component_name]/[demo_name] 的方法
@@ -71,7 +47,6 @@ export default function demo() {
         }
         return '';
       })
-    console.log(withComponentCode)
     const importComponents = Array(...importMap.values()).join('\n');
     // 往setup里添加import
     return withComponentCode.replace('<script setup>', `<script setup>\n${importComponents}`);
