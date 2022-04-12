@@ -4,6 +4,7 @@ import { createMarkdown } from './markdown';
 import { resolveOptions } from './options';
 import type { Options } from './types';
 import demo from "./demo";
+import api from "./api";
 
 export const VitePluginMarkdown = (userOptions: Options = {}): Plugin => {
   const options = resolveOptions(userOptions);
@@ -18,12 +19,14 @@ export const VitePluginMarkdown = (userOptions: Options = {}): Plugin => {
     name: 'vite-plugin-md',
     enforce: 'pre',
     transform(raw, id) {
-      const {findDemo,insertImport} = demo();
+      const { findAPIAndReplace } = api();
+      const { findDemo, insertImport } = demo();
       if (!filter(id))
         return
       try {
+        raw = findAPIAndReplace(raw);
         findDemo(raw);
-        const code =  markdownToVue(id, raw);
+        const code = markdownToVue(id, raw);
         return insertImport(code);
       } catch (e: any) {
         this.error(e)
