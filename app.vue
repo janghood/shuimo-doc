@@ -12,15 +12,14 @@
 
 <script setup type="ts">
 import Header from '/components/base/Header.vue';
-import { useMeta } from "#meta";
 import { computed } from "vue";
 
 const route = useRoute();
-const showIndexButton = computed(()=>{
-  return route.path!=='/';
+const showIndexButton = computed(() => {
+  return route.path !== '/';
 });
 
-useMeta({
+useHead({
   meta: [
     { name: 'author', content: '极客江湖,阿怪,higuaifan' },
     { name: 'description', content: '一款粗暴的水墨UI' },
