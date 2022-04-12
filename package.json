@@ -5,13 +5,14 @@
   "description": "水墨UI",
   "private": true,
   "scripts": {
-    "dev": "nuxi dev",
-    "dev8513": "nuxi dev --port 8513",
-    "build": "nuxi build",
-    "nuxt start": "node .output/server/index.mjs"
+    "dev": "jh-api && nuxi dev",
+    "build": "jh-api && nuxi build",
+    "nuxt start": "node .output/server/index.mjs",
+    "jh-api": "jh-api"
   },
   "devDependencies": {
     "@antfu/utils": "^0.5.1",
+    "@janghood/api-extractor": "^0.0.1-alpha.1",
     "@nuxt/design": "^0.1.5",
     "@nuxt/devalue": "^2.0.0",
     "@nuxt/kit": "npm:@nuxt/kit-edge@latest",
