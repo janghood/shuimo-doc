@@ -1,6 +1,9 @@
 import { defineNuxtConfig } from 'nuxt3';
 
 export default defineNuxtConfig({
+  alias:{
+    '/lib':'/wash-painting-ui/lib'
+  },
   css: [
     '@/assets/style/index.scss'
   ],

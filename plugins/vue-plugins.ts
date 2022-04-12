@@ -7,7 +7,7 @@
  * 公司的业务千篇一律，复杂的代码好几百行。
  */
 import { defineNuxtPlugin } from "#app";
-import { createWUI } from "@higuaifan/wash-painting-ui";
+import { createWUI } from "../wash-painting-ui/lib";
 import { createPinia } from 'pinia';
 
 const WUI = createWUI();
