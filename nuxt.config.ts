@@ -1,9 +1,6 @@
 import { defineNuxtConfig } from 'nuxt3';
 
 export default defineNuxtConfig({
-  alias:{
-    '/lib':'/wash-painting-ui/lib'
-  },
   css: [
     '@/assets/style/index.scss'
   ],
@@ -13,8 +10,8 @@ export default defineNuxtConfig({
   publicRuntimeConfig: {
     API_BASE: process.env.CLIENT_API_BASE
   },
-  extensions:['.md'],
-  modules:[
+  extensions: ['.md'],
+  modules: [
     './modules/markdown'
-  ],
+  ]
 })

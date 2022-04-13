@@ -16,7 +16,7 @@
  * todo 可选是否复制
  */
 import { computed, useSlots } from "vue";
-import { WMessage, WPrinter } from "../../wash-painting-ui/lib";
+import { WMessage, WPrinter } from "@higuaifan/wash-painting-ui";
 
 const props = defineProps<{
   color: string,
