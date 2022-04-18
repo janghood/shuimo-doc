@@ -28,6 +28,8 @@ export const resetCode = (code: string) => {
     ...Prism.languages.typescript,
     ...Prism.languages.scss,
   }
-  temp = Prism.highlight(code, Prism.languages.vue, 'vue');
+  temp = Prism.highlight(code, Prism.languages.vue, 'vue')
+    .replace(/\{/g, '&#123;')
+    .replace(/\}/g, '&#125;')
   return `<pre class="language-vue"><code ref="element">${temp}</code></pre>`;
 }
