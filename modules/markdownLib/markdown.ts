@@ -2,6 +2,7 @@ import MarkdownIt from 'markdown-it'
 import matter from 'gray-matter'
 import { toArray } from '@antfu/utils'
 import type { ResolvedOptions } from './types'
+import { table } from "./plugins/table";
 
 const scriptSetupRE = /<\s*script[^>]*\bsetup\b[^>]*>([\s\S]*)<\/script>/mg
 const defineExposeRE = /defineExpose\s*\(/mg
@@ -37,6 +38,10 @@ export function createMarkdown(options: ResolvedOptions) {
     typographer: true,
     ...options.markdownItOptions,
   })
+  markdown.block.ruler.disable('table');
+  markdown.block.ruler.before('code', 'wTable', table, {
+    alt: ['paragraph', 'reference']
+  });
 
   markdown.linkify.set({ fuzzyLink: false })
 
