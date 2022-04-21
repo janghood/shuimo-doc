@@ -71,6 +71,7 @@ export function createMarkdown(options: ResolvedOptions) {
     const excerpt = grayMatterFile.excerpt === undefined ? '' : grayMatterFile.excerpt
 
     let html = markdown.render(md, { id })
+    html = html.replaceAll('</h1>', '</h1><w-divider/>');
 
     if (wrapperClasses)
       html = `<div class="${wrapperClasses}">${html}</div>`
