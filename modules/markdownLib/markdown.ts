@@ -72,6 +72,7 @@ export function createMarkdown(options: ResolvedOptions) {
 
     let html = markdown.render(md, { id })
     html = html.replaceAll('</h1>', '</h1><w-divider/>');
+    html = html.replaceAll('<hr>', '<w-divider/>');
 
     if (wrapperClasses)
       html = `<div class="${wrapperClasses}">${html}</div>`
