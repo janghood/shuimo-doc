@@ -1,6 +1,5 @@
 # 输入框
 
-
 ### 普通输入框
 
 ::: demo base/input/default
@@ -20,3 +19,15 @@
 ## API
 
 ::: api base/input
+
+-----
+
+# 数字输入框
+
+### 普通数字输入框
+
+::: demo base/input/number
+
+## API
+
+::: api base/inputNumber
