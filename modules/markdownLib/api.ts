@@ -17,7 +17,8 @@ export default function api() {
     return code.replace(
       searchValue,
       (apiStr: string, relativeApiPath: string) => {
-        const fileInfo = fs.readFileSync(`${__dirname}/../../apis/${relativeApiPath}/index.md`, 'utf-8');
+        const path = relativeApiPath.endsWith('.md') ? relativeApiPath : `${relativeApiPath}/index.md`;
+        const fileInfo = fs.readFileSync(`${__dirname}/../../apis/${path}`, 'utf-8');
         return fileInfo || '';
       });
   }
