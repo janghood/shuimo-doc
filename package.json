@@ -14,7 +14,7 @@
   "devDependencies": {
     "@antfu/utils": "^0.5.1",
     "@higuaifan/rollup-plugin-fontmin": "^0.0.1",
-    "@janghood/api-extractor": "^0.0.1-alpha.2",
+    "@janghood/api-extractor": "^0.0.1-alpha.4",
     "@nuxt/kit": "npm:@nuxt/kit-edge@latest",
     "@popperjs/core": "^2.11.5",
     "@rollup/pluginutils": "^4.2.1",

@@ -11,8 +11,8 @@ import defineJhConfig from "../api-extractor/src/config/defineJhConfig";
 
 export default defineJhConfig({
   apiExtractor: {
-    include: ["wash-painting-ui/lib"],
-    exclude: ['dependents'],
+    include: ['node_modules/@higuaifan/wash-painting-ui/lib/**/*.d.ts'],
+    exclude: ['**/dependents/**/*.d.ts', '**/types/**/*.d.ts', '**/basic/**/*.d.ts'],
     document: {
       markdown: {
         output: 'apis',
