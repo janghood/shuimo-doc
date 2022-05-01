@@ -26,6 +26,7 @@ export const menu: MenuTypeArr = [
   {
     title: '模版组件', key: 'docs/components/template/form', isActive: false, children: [
       { title: '表单', key: 'docs/components/template/form', isActive: false },
+      { title: '列表', key: 'docs/components/template/table', isActive: false },
     ]
   }
 ]
