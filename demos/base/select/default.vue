@@ -1,0 +1,3 @@
+<template>
+  <w-select/>
+</template>
