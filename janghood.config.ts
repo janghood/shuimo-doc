@@ -16,6 +16,7 @@ export default defineJhConfig({
     document: {
       markdown: {
         output: 'apis',
+        replace: 'node_modules/@higuaifan/wash-painting-ui/lib/',
         active: true
       }
     }
