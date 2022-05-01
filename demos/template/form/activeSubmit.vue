@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { WPrinter } from "../../../../wash-painting-ui/lib";
+import { WPrinter } from "@higuaifan/wash-painting-ui/lib";
 
 const clickBtn = () => {
   WPrinter('水墨表单组件').info('点击按钮');

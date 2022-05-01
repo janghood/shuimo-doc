@@ -6,7 +6,7 @@
  *
  * 江湖的业务千篇一律，复杂的代码好几百行。
  */
-import defineJhConfig from "../api-extractor/src/config/defineJhConfig";
+import { defineJhConfig } from "@janghood/api-extractor";
 
 
 export default defineJhConfig({
