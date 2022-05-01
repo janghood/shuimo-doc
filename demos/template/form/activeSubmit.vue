@@ -7,9 +7,10 @@
 </template>
 
 <script setup lang="ts">
-import { WPrinter } from "@higuaifan/wash-painting-ui/lib";
+import { WPrinter } from "@higuaifan/wash-painting-ui";
 
 const clickBtn = () => {
+  // 这条不会触发
   WPrinter('水墨表单组件').info('点击按钮');
 }
 
