@@ -26,7 +26,7 @@ const dataDemo = ref([
 ]);
 
 const print = (data) => {
-  WPrinter(data);
+  WPrinter('水墨列表组件').info(data);
 }
 
 </script>
