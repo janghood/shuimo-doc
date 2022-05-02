@@ -29,5 +29,15 @@ export const menu: MenuTypeArr = [
       { title: '列表', key: 'docs/components/template/table', isActive: false },
       { title: '分页', key: 'docs/components/template/pagination', isActive: false },
     ]
+  },
+  {
+    title: '消息组件', key: 'docs/components/message/dialog', isActive: false, children: [
+      { title: '弹窗', key: 'docs/components/message/dialog', isActive: false },
+      { title: '抽屉', key: 'docs/components/message/drawer', isActive: false },
+      { title: '提示', key: 'docs/components/message/message', isActive: false },
+      { title: '气泡卡片', key: 'docs/components/message/popover', isActive: false },
+      { title: '悬浮提示', key: 'docs/components/message/tooltip', isActive: false },
+      { title: '确认框', key: 'docs/components/message/confirm', isActive: false }
+    ]
   }
 ]
