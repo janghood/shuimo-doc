@@ -39,5 +39,14 @@ export const menu: MenuTypeArr = [
       { title: '悬浮提示', key: 'docs/components/message/tooltip', isActive: false },
       { title: '确认框', key: 'docs/components/message/confirm', isActive: false }
     ]
+  },
+  {
+    title: '其他组件', key: 'docs/components/other/upload', isActive: false, children: [
+      { title: '文件上传', key: 'docs/components/other/upload', isActive: false },
+      { title: '控制台打印', key: 'docs/components/other/printer', isActive: false },
+      { title: '分割线', key: 'docs/components/other/divider', isActive: false },
+      { title: '进度条', key: 'docs/components/other/progress', isActive: false },
+      { title: '边框', key: 'docs/components/other/border', isActive: false },
+    ]
   }
 ]
