@@ -27,7 +27,7 @@ a {
   src: url(/fonts/wljh.ttf);
 }
 
-.wash-painting-ui{
+.wash-painting-ui {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -40,13 +40,25 @@ a {
   letter-spacing: 2px;
 }
 
-.layout{
+.layout {
   height: 100vh;
   width: 100vw;
   background: url("/img/base/rice_paper.png") repeat;
   overflow: hidden;
 }
 
-.menu-right{
+.menu-right {
   margin-right: 22px;
+}
+
+.docs {
+  overflow-y: auto;
+
+  h1{
+    margin: 10px 0 0 0;
+  }
+
+  h2, h3 {
+    margin: 20px 0 10px;
+  }
 }
