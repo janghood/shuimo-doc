@@ -1,0 +1,60 @@
+name: Deploy
+on:
+  push:
+    branches: [ master ]
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 安装pnpm
+      - name: prepare pnpm
+        uses: pnpm/action-setup@v2.1.0
+        with:
+          version: 6.0.2
+
+      # 下载源码
+      - name: Checkout
+        uses: actions/checkout@master
+
+      # 打包构建
+      - name: Build
+        uses: actions/setup-node@master
+      - run: pnpm install
+      - run: pnpm run build
+      - run: tar -zcvf wash-painting-doc.zip .output
+
+      # 上传
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: wash-painting-doc.zip
+          token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+
+      # 传到服务器
+      - name: copy file via ssh password
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          source: "wash-painting-doc.zip"
+          target: "/web/wash-painting-doc/build"
+          rm: true
+
+
+      # 部署到服务器
+      - name: Deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            cd /web/wash-painting-doc/build && tar -xvf wash-painting-doc.zip && cd .. && sh ui.sh
+            
+
+
+
