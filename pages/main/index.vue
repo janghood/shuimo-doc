@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-      <img alt="" src="/img/base/logo.png">
+      <img class="logo" alt="" src="/svg/logo.svg">
       <h1>一款水墨组件</h1>
     </header>
     <w-divider/>
@@ -39,7 +39,12 @@
   }
 }
 
-.introduce{
+.logo {
+  height: 200px;
+  width: 200px;
+}
+
+.introduce {
   text-align: center;
   line-height: 30px;
 }
