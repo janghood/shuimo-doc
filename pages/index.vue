@@ -2,6 +2,9 @@
   <main class="entry-main">
     <Component/>
   </main>
+  <footer>
+    <a class="w-cursor-pointer" href="https://beian.miit.gov.cn" target="_blank">浙ICP备15017406号-2</a>
+  </footer>
 </template>
 
 <script lang="ts" setup>
@@ -21,12 +24,29 @@ definePageMeta({
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 .entry-main {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 122px);
   display: grid;
   grid-template-areas:  "container";
 }
 
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100vw;
+  height: 24px;
+  line-height: 24px;
+  background: rgba(51, 51, 51, 0.6);
+  z-index: 10;
+  font-size: 14px;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
 </style>
