@@ -63,7 +63,8 @@ pre[class*="language-"] {
 .token.tag,
 .token.attr-name,
 .token.namespace,
-.token.deleted {
+.token.deleted,
+.token.function {
   color: var(--w-color-error);
 }
 
@@ -72,8 +73,7 @@ pre[class*="language-"] {
 }
 
 .token.boolean,
-.token.number,
-.token.function {
+.token.number {
   color: var(--w-color-orange);
 }
 
