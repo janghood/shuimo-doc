@@ -10,8 +10,13 @@ import type { MenuTypeArr } from "@higuaifan/wash-painting-ui";
 
 
 export const menu: MenuTypeArr = [
-  { title: '首页', key: 'main', isActive: true },
-  { title: '颜色', key: 'docs/color', isActive: false },
+  {
+    title: '首页', key: 'main', isActive: true, children: [
+      { title: '快速开始', key: 'main/quickStart', isActive: false },
+      { title: '颜色', key: 'docs/color', isActive: false },
+    ]
+  },
+
   {
     title: '基础组件', key: 'docs/components/base/button', isActive: false, children: [
       { title: '按钮', key: 'docs/components/base/button', isActive: false },
