@@ -3,6 +3,7 @@ import matter from 'gray-matter'
 import { toArray } from '@antfu/utils'
 import type { ResolvedOptions } from './types'
 import { table } from "./plugins/table";
+import { prismCode } from "./code/parseCode";
 
 const scriptSetupRE = /<\s*script[^>]*\bsetup\b[^>]*>([\s\S]*)<\/script>/mg
 const defineExposeRE = /defineExpose\s*\(/mg
@@ -70,7 +71,10 @@ export function createMarkdown(options: ResolvedOptions) {
     const { content: md, data } = grayMatterFile
     const excerpt = grayMatterFile.excerpt === undefined ? '' : grayMatterFile.excerpt
 
-    let html = markdown.render(md, { id })
+    let html = markdown.render(md, { id });
+
+
+    html = prismCode(html);
     html = html.replaceAll('</h1>', '</h1><w-divider/>');
     html = html.replaceAll('<hr>', '<w-divider/>');
 
@@ -82,6 +86,7 @@ export function createMarkdown(options: ResolvedOptions) {
       html = `<${wrapperComponent}${options.frontmatter ? ' :frontmatter="frontmatter"' : ''}${options.excerpt ? ' :excerpt="excerpt"' : ''}>${html}</${wrapperComponent}>`
     if (transforms.after)
       html = transforms.after(html, id)
+
 
     if (options.escapeCodeTagInterpolation) {
       // escape curly brackets interpolation in <code>, #14
