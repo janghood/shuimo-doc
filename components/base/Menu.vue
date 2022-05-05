@@ -12,7 +12,6 @@
  * 公司的业务千篇一律，复杂的代码好几百行。
  */
 import { ref } from "vue";
-import { useRouter } from "nuxt/app";
 import { menu } from "~/config/menu.config";
 
 const menuList = ref(menu);
