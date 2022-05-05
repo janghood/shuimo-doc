@@ -1,10 +1,12 @@
 <template>
-  <main class="entry-main">
-    <Component/>
-  </main>
-  <footer>
-    <a class="w-cursor-pointer" href="https://beian.miit.gov.cn" target="_blank">浙ICP备15017406号-2</a>
-  </footer>
+  <div>
+    <main class="entry-main">
+      <ComponentDialog/>
+    </main>
+    <footer>
+      <a class="w-cursor-pointer" href="https://beian.miit.gov.cn" target="_blank">浙ICP备15017406号-2</a>
+    </footer>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -16,7 +18,7 @@
  *
  * 公司的业务千篇一律，复杂的代码好几百行。
  */
-import Component from '/components/entry/Component.vue';
+import ComponentDialog from '~/components/entry/ComponentDialog.vue';
 
 definePageMeta({
   layout: 'without-menu'

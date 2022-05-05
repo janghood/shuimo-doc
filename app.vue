@@ -2,7 +2,7 @@
   <div class="wash-painting-ui w-cursor">
     <Title>水墨UI</Title>
     <div class="layout">
-      <Header :show-index-button="showIndexButton"/>
+      <HeaderBase :show-index-button="showIndexButton"/>
       <NuxtLayout>
         <NuxtPage/>
       </NuxtLayout>
@@ -11,7 +11,7 @@
 </template>
 
 <script setup type="ts">
-import Header from '/components/base/Header.vue';
+import HeaderBase from '~/components/base/HeaderBase.vue';
 import { computed } from "vue";
 
 const route = useRoute();
