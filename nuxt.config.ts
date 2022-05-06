@@ -12,6 +12,7 @@ export default defineNuxtConfig({
   },
   extensions: ['.md'],
   modules: [
-    './modules/markdown'
+    './modules/markdown',
+    './modules/fontmin',
   ]
 })
