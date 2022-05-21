@@ -11,7 +11,10 @@ const callMessage = () => {
   WMessage.success('success的message');
   WMessage.warning('warning的message');
   WMessage.info('info的message');
-  WMessage({ content: 'normal' })
+  WMessage({
+    content: 'normal',
+    direction: 'top-right'
+  })
 }
 
 
