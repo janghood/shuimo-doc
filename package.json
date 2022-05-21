@@ -27,7 +27,7 @@
     "vite-plugin-md": "^0.11.9"
   },
   "dependencies": {
-    "@higuaifan/wash-painting-ui": "^0.1.12-beta.2",
+    "@higuaifan/wash-painting-ui": "^0.1.12-beta.3",
     "markdown-it": "^12.3.2",
     "pinia": "^2.0.13",
     "sass": "^1.50.0",
