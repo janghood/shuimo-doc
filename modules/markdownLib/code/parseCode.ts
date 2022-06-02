@@ -22,7 +22,8 @@ Prism.languages['vue'] = {
 enum highlightType {
   'typescript' = 'typescript',
   'shell' = 'shell',
-  'vue' = 'vue'
+  'vue' = 'vue',
+  'scss' = 'scss',
 }
 
 const highlight = (code: string, type: highlightType) => {
@@ -36,6 +37,9 @@ const highlight = (code: string, type: highlightType) => {
   }
   if (type === highlightType.shell) {
     return Prism.highlight(code, Prism.languages.shell, highlightType.shell)
+  }
+  if (type === highlightType.scss) {
+    return Prism.highlight(code, Prism.languages.scss, highlightType.scss)
   }
   return code;
 }
