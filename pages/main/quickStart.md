@@ -5,9 +5,9 @@
 ``` shell
 npm install @higuaifan/wash-painting-ui
 
-yarn install @higuaifan/wash-painting-ui
+yarn add @higuaifan/wash-painting-ui
 
-pnpm install @higuaifan/wash-painting-ui
+pnpm add @higuaifan/wash-painting-ui
 ```
 
 ### Vue
