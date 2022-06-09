@@ -15,14 +15,9 @@ pnpm add shuimo-ui
 ``` typescript
 // main.ts
 import { createMUI } from 'shuimo-ui';
-import 'shuimo-ui/dist/style.css'; // 【引入样式】 v0.1.13 及以上版本
+import 'shuimo-ui/dist/style.css';
 
 app.use(createMUI());
-```
-
-``` scss
-// 低于v0.1.13版本，需要以这种方式在scss等预处理样式文件中引入【vite】
-@import '/node_modules/shuimo-ui/dist/style.css';
 ```
 
 #### 按需引用
@@ -54,7 +49,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 // nuxt.config.ts
 export default defineNuxtConfig({
   css: [
-    'shuimo-ui/dist/style.css' // v0.1.13 及以上版本
+    'shuimo-ui/dist/style.css'
   ]
 })
 
