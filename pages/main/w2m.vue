@@ -14,7 +14,7 @@
     <blockquote>"是得有个英文名吧？"</blockquote>
 
     <article>
-      <p>于是经过一番冲浪后，犹犹豫豫地定下了<code>wash-painting</code>这个名字，可越读这玩意越觉得奇怪。</p>
+      <p>于是经过一番冲浪后，犹犹豫豫得定下了<code>wash-painting</code>这个名字，可越读这玩意越觉得奇怪。</p>
 
       <p>也没有地道的原装英语使用者能给出好的建议。</p>
 
@@ -32,9 +32,9 @@
 
     <p>我想了很多的借口，例如<code>水墨的本质还是墨</code>之类的。</p>
 
-    <p>但是还是比不上我们讨论的时候我随手打出了<code>SButton</code>这几个字符来的刺激。</p>
+    <p>但是还是比不上我们讨论的时候我随手打出了<code>SButton</code>这几个字符来地刺激。</p>
 
-    <p>加上我觉得<code>s</code>打头没有曾经的<code>w</code>或者是现在的<code>m</code>来的稳重。</p>
+    <p>加上我觉得<code>s</code>打头没有曾经的<code>w</code>或者是现在的<code>m</code>那么稳重。</p>
 
     <p>所以还是<code>m</code>吧，墨组件听起来也挺酷的。</p>
 
@@ -43,21 +43,21 @@
     <h2>快速升级</h2>
     <m-divider/>
 
-    <p>要切换到新版本，会影响到本来的组件命名，</p>
+    <p>要切换到新版本，会影响到本来地组件命名，</p>
 
     <p>这边我提供一个小工具，目前已经经过我们内部项目的测试，大抵上是没有问题的。</p>
 
     <p>可以直接阅读
       <a href="https://www.npmjs.com/package/@janghood/wash-painting-to-shuimo" target="_blank">
         wash-painting-to-shuimo的npm文档
-      </a>
+      </a>。
     </p>
 
     <br/>
     <m-divider/>
 
     <blockquote>
-      <strong>给您带来的麻烦我们深表歉意🙇</strong>
+      <strong>给您带来地麻烦我们深表歉意🙇</strong>
     </blockquote>
 
     <p>老版本的源码拉了一个单独的分支，不过大概率这个分支不再更新了，也许发现没人在用后会删除掉。</p>
