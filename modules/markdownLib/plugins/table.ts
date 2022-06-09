@@ -175,16 +175,16 @@ export const table: RuleBlock = (state, startLine, endLine, silent) => {
   token.map = tableLines = [startLine, startLine + 1];
 
   token = state.push('thead_open', 'thead', 1);
-  token.attrs = [['class', 'w-thead']];
+  token.attrs = [['class', 'm-thead']];
   token.map = [startLine, startLine + 1];
 
   token = state.push('tr_open', 'tr', 1);
-  token.attrs = [['class', 'w-tr']];
+  token.attrs = [['class', 'm-tr']];
   token.map = [startLine, startLine + 1];
 
   for (i = 0; i < columns.length; i++) {
     token = state.push('th_open', 'th', 1);
-    token.attrs = [['class', 'w-th']];
+    token.attrs = [['class', 'm-th']];
     if (aligns[i]) {
       token.attrs = [['style', 'text-align:' + aligns[i]]];
     }
@@ -220,17 +220,17 @@ export const table: RuleBlock = (state, startLine, endLine, silent) => {
 
     if (nextLine === startLine + 2) {
       token = state.push('tbody_open', 'tbody', 1);
-      token.attrs = [['class', 'w-tbody']];
+      token.attrs = [['class', 'm-tbody']];
       token.map = tbodyLines = [startLine + 2, 0];
     }
 
     token = state.push('tr_open', 'tr', 1);
-    token.attrs = [['class', 'w-tr']];
+    token.attrs = [['class', 'm-tr']];
     token.map = [nextLine, nextLine + 1];
 
     for (i = 0; i < columnCount; i++) {
       token = state.push('td_open', 'td', 1);
-      token.attrs = [['class', 'w-td']];
+      token.attrs = [['class', 'm-td']];
       if (aligns[i]) {
         token.attrs = [['style', 'text-align:' + aligns[i]]];
       }

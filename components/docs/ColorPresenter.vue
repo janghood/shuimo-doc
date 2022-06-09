@@ -1,5 +1,5 @@
 <template>
-  <div class="m-color w-cursor-pointer" @click="copy">
+  <div class="m-color m-cursor-pointer" @click="copy">
     <slot/>
   </div>
 </template>

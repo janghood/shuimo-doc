@@ -1,5 +1,5 @@
 <template>
-  <div class="shuimo-ui w-cursor">
+  <div class="shuimo-ui m-cursor">
     <Title>水墨UI</Title>
     <div class="layout">
       <HeaderBase :show-index-button="showIndexButton"/>

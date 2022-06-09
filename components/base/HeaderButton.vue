@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink class="header-button w-cursor-pointer" :to="url">
+  <NuxtLink class="header-button m-cursor-pointer" :to="url">
     <slot></slot>
   </NuxtLink>
 </template>
