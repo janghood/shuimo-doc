@@ -1,3 +1,3 @@
 <template>
-  <w-input/>
+  <m-input/>
 </template>

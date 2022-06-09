@@ -1,3 +1,3 @@
 <template>
-  <w-checkbox lable="极客江湖"/>
+  <m-checkbox lable="极客江湖"/>
 </template>

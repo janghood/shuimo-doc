@@ -1,6 +1,6 @@
 <template>
   <h2><slot></slot></h2>
-  <w-divider/>
+  <m-divider/>
 </template>
 
 <script setup lang="ts">

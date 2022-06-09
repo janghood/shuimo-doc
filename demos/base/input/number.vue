@@ -1,6 +1,6 @@
 <template>
   <div>数字为:{{ number }}</div>
-  <w-input-number v-model="number" :max="10" :min="-10"/>
+  <m-input-number v-model="number" :max="10" :min="-10"/>
 </template>
 
 <script setup lang="ts">

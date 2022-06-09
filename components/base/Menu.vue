@@ -1,5 +1,5 @@
 <template>
-  <w-menu class="menu" :menu="menuList" @click="clickMenu"/>
+  <m-menu class="menu" :menu="menuList" @click="clickMenu"/>
 </template>
 
 <script lang="ts" setup>

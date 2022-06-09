@@ -1,5 +1,5 @@
 <template>
-  <div class="wash-painting-ui w-cursor">
+  <div class="shuimo-ui w-cursor">
     <Title>水墨UI</Title>
     <div class="layout">
       <HeaderBase :show-index-button="showIndexButton"/>

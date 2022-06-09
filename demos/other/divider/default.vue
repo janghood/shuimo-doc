@@ -1,3 +1,3 @@
 <template>
-  <w-divider/>
+  <m-divider/>
 </template>

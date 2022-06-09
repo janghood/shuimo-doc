@@ -6,7 +6,7 @@
  *
  * 公司的业务千篇一律，复杂的代码好几百行。
  */
-import type { MenuTypeArr } from "@higuaifan/wash-painting-ui";
+import type { MenuTypeArr } from "shuimo-ui";
 
 
 export const menu: MenuTypeArr = [

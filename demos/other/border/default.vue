@@ -1,13 +1,13 @@
 <template>
-  <w-border>
+  <m-border>
     <div class="red"></div>
-  </w-border>
+  </m-border>
 </template>
 
 <style scoped>
 .red {
   width: 200px;
   height: 100px;
-  background: var(--w-color-error);
+  background: var(--m-color-error);
 }
 </style>

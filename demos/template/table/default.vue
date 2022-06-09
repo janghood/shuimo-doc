@@ -1,18 +1,18 @@
 <template>
-  <w-table :data="dataDemo" height="350px">
-    <w-table-column width="80px" param="id" label="序号"/>
-    <w-table-column param="param" label="参数"/>
-    <w-table-column param="option" label="操作">
+  <m-table :data="dataDemo" height="350px">
+    <m-table-column width="80px" param="id" label="序号"/>
+    <m-table-column param="param" label="参数"/>
+    <m-table-column param="option" label="操作">
       <template #default="{data}">
-        <w-button text="操作" @click="print(data)"/>
+        <m-button text="操作" @click="print(data)"/>
       </template>
-    </w-table-column>
-  </w-table>
+    </m-table-column>
+  </m-table>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { WPrinter } from "@higuaifan/wash-painting-ui";
+import { MPrinter } from "shuimo-ui";
 
 const dataDemo = ref([
   { id: 1, param: '立春' },
@@ -26,7 +26,7 @@ const dataDemo = ref([
 ]);
 
 const print = (data) => {
-  WPrinter('水墨列表组件').info(data);
+  MPrinter('水墨列表组件').info(data);
 }
 
 </script>

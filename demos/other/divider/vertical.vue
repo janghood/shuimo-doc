@@ -1,9 +1,9 @@
 <template>
-  <w-divider vertical/>
+  <m-divider vertical/>
 </template>
 
 <style scoped>
-.w-divider {
+.m-divider {
   height: 500px;
   width: 10px;
 }

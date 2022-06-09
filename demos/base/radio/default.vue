@@ -1,6 +1,6 @@
 <template>
   <div>选择参数: {{value}}</div>
-  <w-radio v-model="value" label="janghood">极客江湖</w-radio>
+  <m-radio v-model="value" label="janghood">极客江湖</m-radio>
 </template>
 
 <script setup lang="ts">

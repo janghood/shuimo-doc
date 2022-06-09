@@ -1,15 +1,15 @@
 <template>
-  <w-button text="点击弹出确认框" @click="showConfirm"/>
+  <m-button text="点击弹出确认框" @click="showConfirm"/>
 </template>
 
 <script setup lang="ts">
-import { WConfirm, WPrinter } from "@higuaifan/wash-painting-ui";
+import { MConfirm, MPrinter } from "shuimo-ui";
 
 const showConfirm = async () => {
-  const res = await WConfirm({
+  const res = await MConfirm({
     content: '嗨嗨嗨！大侠别来无恙！'
   });
-  WPrinter('水墨确认组件').info(res);
+  MPrinter('水墨确认组件').info(res);
 }
 
 </script>

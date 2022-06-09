@@ -1,7 +1,7 @@
 <template>
-  <w-progress :height="18" :value="loopPer" :max="1000" :show-info="true">
+  <m-progress :height="18" :value="loopPer" :max="1000" :show-info="true">
     <span>{{ Math.ceil(loopPer / 10) }}%</span>
-  </w-progress>
+  </m-progress>
 </template>
 
 <script setup lang="ts">

@@ -1,13 +1,13 @@
 <template>
-  <w-button @click="showDialog">点击显示弹窗</w-button>
-  <w-dialog @close="closeDialog" :visible="visible" :mask="{show:false}">
+  <m-button @click="showDialog">点击显示弹窗</m-button>
+  <m-dialog @close="closeDialog" :visible="visible" :mask="{show:false}">
     <span>嗨嗨嗨！大侠别来无恙！</span>
-  </w-dialog>
+  </m-dialog>
 </template>
 
 <script setup lang="ts">
 
-import { useDialog } from "@higuaifan/wash-painting-ui";
+import { useDialog } from "shuimo-ui";
 
 const { visible, closeDialog, showDialog } = useDialog();
 

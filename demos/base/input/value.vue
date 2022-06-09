@@ -1,7 +1,7 @@
 <template>
   <span>{{ value }}</span>
   <br/>
-  <w-input v-model="value"/>
+  <m-input v-model="value"/>
 </template>
 
 <script setup lang="ts">

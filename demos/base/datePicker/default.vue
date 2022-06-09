@@ -1,3 +1,3 @@
 <template>
-  <w-date-picker/>
+  <m-date-picker/>
 </template>

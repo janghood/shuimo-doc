@@ -1,5 +1,5 @@
 <template>
-  <w-list :data="data" autoActive/>
+  <m-list :data="data" autoActive/>
 </template>
 
 <script setup lang="ts">

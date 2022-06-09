@@ -1,6 +1,6 @@
 <template>
   <div>当前页：{{ current }}</div>
-  <w-pagination :total="11" v-model:current="current"></w-pagination>
+  <m-pagination :total="11" v-model:current="current"></m-pagination>
 </template>
 
 <script setup lang="ts">

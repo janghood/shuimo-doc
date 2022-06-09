@@ -152,26 +152,26 @@ export const table: RuleBlock = (state, startLine, endLine, silent) => {
 
 
   token = state.push('w_table_open', 'div', 1);
-  token.attrs = [['class', 'w-table']];
+  token.attrs = [['class', 'm-table']];
   token.map = [startLine, 0];
 
   token = state.push('w_table_header_top_open', 'div', 1);
-  token.attrs = [['class', 'w-table-header-img-top']];
+  token.attrs = [['class', 'm-table-header-img-top']];
   token.map = [startLine, startLine + 1];
   token = state.push('w_table_header_top_close', 'div', -1);
 
   token = state.push('w_table_header_bottom_open', 'div', 1);
-  token.attrs = [['class', 'w-table-header-img-bottom']];
+  token.attrs = [['class', 'm-table-header-img-bottom']];
   token.map = [startLine, startLine + 1];
   token = state.push('w_table_header_bottom_close', 'div', -1);
 
   token = state.push('w_table_warp_open', 'div', 1);
-  token.attrs = [['class', 'w-table-wrap']];
+  token.attrs = [['class', 'm-table-wrap']];
   token.map = [startLine, startLine + 1];
 
 
   token = state.push('table_open', 'table', 1);
-  token.attrs = [['class', 'w-table-inner']];
+  token.attrs = [['class', 'm-table-inner']];
   token.map = tableLines = [startLine, startLine + 1];
 
   token = state.push('thead_open', 'thead', 1);
@@ -243,7 +243,7 @@ export const table: RuleBlock = (state, startLine, endLine, silent) => {
     }
 
     token = state.push('w_table_tbody_img_open', 'td', 1);
-    token.attrs = [['class', 'w-table-tbody-img']];
+    token.attrs = [['class', 'm-table-tbody-img']];
     token.map = [nextLine, nextLine + 1];
     token = state.push('w_table_tbody_img_close', 'td', -1);
 
@@ -259,7 +259,7 @@ export const table: RuleBlock = (state, startLine, endLine, silent) => {
   token = state.push('w_table_warp_close', 'div', -1);
 
   token = state.push('w_table_border_bottom_open', 'div', 1);
-  token.attrs = [['class', 'w-table-border-img-bottom']];
+  token.attrs = [['class', 'm-table-border-img-bottom']];
   token.map = [nextLine, nextLine + 1];
   token = state.push('w_table_border_bottom_close', 'div', -1);
 

@@ -7,11 +7,10 @@
  * 公司的业务千篇一律，复杂的代码好几百行。
  */
 import { defineNuxtPlugin } from "#app";
-import { createWUI } from "@higuaifan/wash-painting-ui";
+import { createMUI } from "shuimo-ui";
 import { createPinia } from 'pinia';
 
-const WUI = createWUI();
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.vueApp.use(WUI);
+  nuxtApp.vueApp.use(createMUI());
   nuxtApp.vueApp.use(createPinia());
 })

@@ -1,6 +1,6 @@
 <template>
   <div>日期：{{ date }}</div>
-  <w-date-picker v-model="date"/>
+  <m-date-picker v-model="date"/>
 </template>
 
 <script setup lang="ts">

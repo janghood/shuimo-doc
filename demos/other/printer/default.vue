@@ -1,12 +1,12 @@
 <template>
-  <w-button @click="rePrint">点击再次打印</w-button>
+  <m-button @click="rePrint">点击再次打印</m-button>
 </template>
 
 <script setup lang="ts">
-import { WPrinter } from "@higuaifan/wash-painting-ui";
+import { MPrinter } from "shuimo-ui";
 import { onMounted } from "vue";
 
-const printer = WPrinter('极客江湖');
+const printer = MPrinter('极客江湖');
 
 const rePrint = ()=>{
   printer.suggest('建议');

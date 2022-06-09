@@ -1,3 +1,3 @@
 <template>
-  <w-input placeholder="请大侠输入...."/>
+  <m-input placeholder="请大侠输入...."/>
 </template>

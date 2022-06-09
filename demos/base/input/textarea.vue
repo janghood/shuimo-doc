@@ -1,3 +1,3 @@
 <template>
-  <w-input type="textarea"/>
+  <m-input type="textarea"/>
 </template>

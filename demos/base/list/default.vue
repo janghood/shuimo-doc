@@ -1,9 +1,9 @@
 <template>
-  <w-list :data="data">
+  <m-list :data="data">
     <template #default="item">
       <span>{{ item.title }}</span>
     </template>
-  </w-list>
+  </m-list>
 </template>
 
 <script setup lang="ts">

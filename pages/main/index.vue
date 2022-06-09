@@ -4,7 +4,7 @@
       <img class="logo" alt="" src="/svg/logo.svg">
       <h1>一款水墨组件</h1>
     </header>
-    <w-divider/>
+    <m-divider/>
     <div class="introduce">
       <br/>
       <h2>这是一款开箱即用的 <b>水墨风</b> 组件库。</h2>

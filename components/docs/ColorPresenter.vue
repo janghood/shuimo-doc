@@ -1,5 +1,5 @@
 <template>
-  <div class="w-color w-cursor-pointer" @click="copy">
+  <div class="m-color w-cursor-pointer" @click="copy">
     <slot/>
   </div>
 </template>
@@ -16,7 +16,7 @@
  * todo 可选是否复制
  */
 import { computed, useSlots } from "vue";
-import { WMessage, WPrinter } from "@higuaifan/wash-painting-ui";
+import { MMessage, MPrinter } from "shuimo-ui";
 
 const props = defineProps<{
   color: string,
@@ -24,7 +24,7 @@ const props = defineProps<{
 }>();
 
 const slot = useSlots();
-const colorClassVar = `--w-color-${props.color}`;
+const colorClassVar = `--m-color-${props.color}`;
 const colorValue = computed(() => `var(${colorClassVar},white)`);
 const fontColor = props.fontColor || 'white';
 
@@ -32,10 +32,10 @@ const fontSize = computed(() => String(slot.default!()[0].children).length === 2
 
 const copy = () => {
   navigator.clipboard.writeText(colorClassVar).then(() => {
-    WMessage.success(`已将样式${colorClassVar}复制到剪贴板！`);
+    MMessage.success(`已将样式${colorClassVar}复制到剪贴板！`);
   }, e => {
-    WPrinter('颜色复制').error(e);
-    WMessage.error('复制失败！');
+    MPrinter('颜色复制').error(e);
+    MMessage.error('复制失败！');
   });
 }
 
@@ -43,7 +43,7 @@ const copy = () => {
 
 <style lang="scss" scoped>
 
-.w-color {
+.m-color {
   display: inline-block;
   height: 100px;
   width: 100px;

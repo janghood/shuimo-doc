@@ -11,12 +11,12 @@ import { defineJhConfig } from "@janghood/api-extractor";
 
 export default defineJhConfig({
   apiExtractor: {
-    include: ['node_modules/@higuaifan/wash-painting-ui/lib/**/*.d.ts'],
+    include: ['node_modules/shuimo-ui/lib/**/*.d.ts'],
     exclude: ['**/dependents/**/*.d.ts', '**/types/**/*.d.ts', '**/basic/**/*.d.ts'],
     document: {
       markdown: {
         output: 'apis',
-        replace: 'node_modules/@higuaifan/wash-painting-ui/lib/',
+        replace: 'node_modules/shuimo-ui/lib/',
         active: true
       }
     }

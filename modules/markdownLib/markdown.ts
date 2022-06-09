@@ -75,8 +75,8 @@ export function createMarkdown(options: ResolvedOptions) {
 
 
     html = prismCode(html);
-    html = html.replaceAll('</h1>', '</h1><w-divider/>');
-    html = html.replaceAll('<hr>', '<w-divider/>');
+    html = html.replaceAll('</h1>', '</h1><m-divider/>');
+    html = html.replaceAll('<hr>', '<m-divider/>');
 
     if (wrapperClasses)
       html = `<div class="${wrapperClasses}">${html}</div>`

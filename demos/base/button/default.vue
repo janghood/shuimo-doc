@@ -1,3 +1,3 @@
 <template>
-  <w-button>普通按钮</w-button>
+  <m-button>普通按钮</m-button>
 </template>

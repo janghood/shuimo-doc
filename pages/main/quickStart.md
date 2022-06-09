@@ -3,37 +3,37 @@
 ## 安装
 
 ``` shell
-npm install @higuaifan/wash-painting-ui
+npm install shuimo-ui
 
-yarn add @higuaifan/wash-painting-ui
+yarn add shuimo-ui
 
-pnpm add @higuaifan/wash-painting-ui
+pnpm add shuimo-ui
 ```
 
 ### Vue
 
 ``` typescript
 // main.ts
-import { createWUI } from '@higuaifan/wash-painting-ui';
-import '@higuaifan/wash-painting-ui/dist/style.css'; // 【引入样式】 v0.1.13 及以上版本
+import { createMUI } from 'shuimo-ui';
+import 'shuimo-ui/dist/style.css'; // 【引入样式】 v0.1.13 及以上版本
 
-app.use(createWUI());
+app.use(createMUI());
 ```
 
 ``` scss
 // 低于v0.1.13版本，需要以这种方式在scss等预处理样式文件中引入【vite】
-@import '/node_modules/@higuaifan/wash-painting-ui/dist/style.css';
+@import '/node_modules/shuimo-ui/dist/style.css';
 ```
 
 #### 按需引用
 
 ``` vue
 <template>
-  <WInput/>
+  <MInput/>
 </template>
 
 <script setup>
-import { WInput } from '@higuaifan/wash-painting-ui';
+import { MInput } from 'shuimo-ui';
 </script>
 ```
 
@@ -41,7 +41,7 @@ import { WInput } from '@higuaifan/wash-painting-ui';
 
 ``` typescript
 // plugins/vue-plugins.ts
-import { createWUI } from '@higuaifan/wash-painting-ui';
+import { createMUI } from 'shuimo-ui';
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(WUI);
@@ -54,7 +54,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 // nuxt.config.ts
 export default defineNuxtConfig({
   css: [
-    '@higuaifan/wash-painting-ui/dist/style.css' // v0.1.13 及以上版本
+    'shuimo-ui/dist/style.css' // v0.1.13 及以上版本
   ]
 })
 

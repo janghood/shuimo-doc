@@ -1,3 +1,3 @@
 <template>
-  <w-select/>
+  <m-select/>
 </template>

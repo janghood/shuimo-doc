@@ -1,17 +1,17 @@
 <template>
-  <w-form submit>
-    <w-form-item label="按钮">
-      <w-button @click="clickBtn">点击触发action</w-button>
-    </w-form-item>
-  </w-form>
+  <m-form submit>
+    <m-form-item label="按钮">
+      <m-button @click="clickBtn">点击触发action</m-button>
+    </m-form-item>
+  </m-form>
 </template>
 
 <script setup lang="ts">
-import { WPrinter } from "@higuaifan/wash-painting-ui";
+import { MPrinter } from "shuimo-ui";
 
 const clickBtn = () => {
   // 这条不会触发
-  WPrinter('水墨表单组件').info('点击按钮');
+  MPrinter('水墨表单组件').info('点击按钮');
 }
 
 </script>
