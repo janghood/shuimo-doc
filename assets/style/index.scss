@@ -53,12 +53,22 @@ a {
 
 .docs {
   overflow-y: auto;
+  margin-bottom: 30px;
 
-  h1{
-    margin: 10px 0 0 0;
+  h1 {
+    margin: 20px 0 10px;
   }
 
   h2, h3 {
     margin: 20px 0 10px;
+  }
+
+  a {
+    cursor: url("/node_modules/shuimo-ui/lib/assets/cursor/pointer.png"), auto !important;
+    color: var(--m-color-green);
+
+    &:hover {
+      color: var(--m-color-error);
+    }
   }
 }
