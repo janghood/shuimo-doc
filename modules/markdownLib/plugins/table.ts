@@ -151,21 +151,21 @@ export const table: RuleBlock = (state, startLine, endLine, silent) => {
   const terminatorRules = state.md.block.ruler.getRules('blockquote');
 
 
-  token = state.push('w_table_open', 'div', 1);
+  token = state.push('m_table_open', 'div', 1);
   token.attrs = [['class', 'm-table']];
   token.map = [startLine, 0];
 
-  token = state.push('w_table_header_top_open', 'div', 1);
+  token = state.push('m_table_header_top_open', 'div', 1);
   token.attrs = [['class', 'm-table-header-img-top']];
   token.map = [startLine, startLine + 1];
-  token = state.push('w_table_header_top_close', 'div', -1);
+  token = state.push('m_table_header_top_close', 'div', -1);
 
-  token = state.push('w_table_header_bottom_open', 'div', 1);
+  token = state.push('m_table_header_bottom_open', 'div', 1);
   token.attrs = [['class', 'm-table-header-img-bottom']];
   token.map = [startLine, startLine + 1];
-  token = state.push('w_table_header_bottom_close', 'div', -1);
+  token = state.push('m_table_header_bottom_close', 'div', -1);
 
-  token = state.push('w_table_warp_open', 'div', 1);
+  token = state.push('m_table_warp_open', 'div', 1);
   token.attrs = [['class', 'm-table-wrap']];
   token.map = [startLine, startLine + 1];
 
@@ -242,10 +242,10 @@ export const table: RuleBlock = (state, startLine, endLine, silent) => {
       token = state.push('td_close', 'td', -1);
     }
 
-    token = state.push('w_table_tbody_img_open', 'td', 1);
+    token = state.push('m_table_tbody_img_open', 'td', 1);
     token.attrs = [['class', 'm-table-tbody-img']];
     token.map = [nextLine, nextLine + 1];
-    token = state.push('w_table_tbody_img_close', 'td', -1);
+    token = state.push('m_table_tbody_img_close', 'td', -1);
 
     token = state.push('tr_close', 'tr', -1);
   }
@@ -256,14 +256,14 @@ export const table: RuleBlock = (state, startLine, endLine, silent) => {
   }
 
   token = state.push('table_close', 'table', -1);
-  token = state.push('w_table_warp_close', 'div', -1);
+  token = state.push('m_table_warp_close', 'div', -1);
 
-  token = state.push('w_table_border_bottom_open', 'div', 1);
+  token = state.push('m_table_border_bottom_open', 'div', 1);
   token.attrs = [['class', 'm-table-border-img-bottom']];
   token.map = [nextLine, nextLine + 1];
-  token = state.push('w_table_border_bottom_close', 'div', -1);
+  token = state.push('m_table_border_bottom_close', 'div', -1);
 
-  token = state.push('w_table_close', 'div', -1);
+  token = state.push('m_table_close', 'div', -1);
   tableLines[1] = nextLine;
 
   state.parentType = oldParentType;
