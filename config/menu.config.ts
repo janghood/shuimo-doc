@@ -34,6 +34,7 @@ export const menu: MenuTypeArr = [
       { title: '表单', key: 'docs/components/template/form', isActive: false },
       { title: '列表', key: 'docs/components/template/table', isActive: false },
       { title: '分页', key: 'docs/components/template/pagination', isActive: false },
+      { title: '宣纸布局', key: 'docs/components/template/rice-paper', isActive: false },
     ]
   },
   {
