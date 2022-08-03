@@ -1,5 +1,7 @@
 <template>
-  <m-button>普通</m-button>
-  <m-button type="gray">灰色</m-button>
-  <m-button type="double">双边框</m-button>
+  <m-button>默认</m-button>
+  <m-button type="primary">主要</m-button>
+  <m-button type="confirm">确认</m-button>
+  <m-button type="error">错误</m-button>
+  <m-button type="warning">警告</m-button>
 </template>
