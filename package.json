@@ -31,7 +31,7 @@
   "dependencies": {
     "markdown-it": "^12.3.2",
     "sass": "^1.54.0",
-    "shuimo-ui": "^0.2.2",
+    "shuimo-ui": "^0.2.3",
     "vite": "^2.9.14",
     "vue": "^3.2.37"
   }
