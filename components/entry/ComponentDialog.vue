@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import useMouseMove from "~/compositions/entry/useMouseMove";
+import useMouseMove from "@/compositions/entry/useMouseMove";
 
 useMouseMove('level', 25);
 

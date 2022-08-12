@@ -18,7 +18,7 @@
  *
  * 公司的业务千篇一律，复杂的代码好几百行。
  */
-import ComponentDialog from '~/components/entry/ComponentDialog.vue';
+import ComponentDialog from '@/components/entry/ComponentDialog.vue';
 
 definePageMeta({
   layout: 'without-menu'
