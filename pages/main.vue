@@ -1,5 +1,5 @@
 <template>
-  <div class="home menu-right">
+  <div class="home menu-right m-scroll">
     <NuxtPage/>
   </div>
 </template>
