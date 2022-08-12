@@ -1,19 +1,11 @@
-import { defineNuxtConfig } from 'nuxt';
+import { defineNuxtConfig } from 'nuxt'
 
+// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   css: [
     '@/assets/style/index.scss',
     'shuimo-ui/dist/style.css'
   ],
-  privateRuntimeConfig: {
-    API_BASE: process.env.SERVER_API_BASE
-  },
-  publicRuntimeConfig: {
-    API_BASE: process.env.CLIENT_API_BASE
-  },
   extensions: ['.md'],
-  modules: [
-    './modules/markdown',
-    './modules/fontmin',
-  ]
+  modules: ['./modules/markdown', './modules/fontmin',]
 })

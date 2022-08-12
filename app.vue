@@ -2,7 +2,7 @@
   <div class="shuimo-ui m-cursor">
     <Title>水墨UI</Title>
     <div class="layout">
-      <HeaderBase :show-index-button="showIndexButton"/>
+      <BaseHeaderBase :show-index-button="showIndexButton"/>
       <NuxtLayout>
         <NuxtPage/>
       </NuxtLayout>
@@ -10,10 +10,8 @@
   </div>
 </template>
 
-<script setup type="ts">
-import HeaderBase from '~/components/base/HeaderBase.vue';
-import { computed } from "vue";
 
+<script setup lang="ts">
 const route = useRoute();
 const showIndexButton = computed(() => {
   return route.path !== '/';
