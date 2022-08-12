@@ -34,8 +34,9 @@ export default function demo() {
   /**
    * 用于在md转vue后添加导入的方法
    * @param code
+   * @param fileName
    */
-  const insertImport = (code: string) => {
+  const insertImport = (code: string, fileName: string) => {
     // 添加组件
     const withComponentCode = code.replace(
       insertSearchValue,
@@ -48,8 +49,9 @@ export default function demo() {
         return '';
       })
     const importComponents = Array(...importMap.values()).join('\n');
+    const aliasPage = `${importComponents};\n import { definePageMeta } from "#imports";\n definePageMeta({ alias:'/${fileName}' })`;
     // 往setup里添加import
-    return withComponentCode.replace('<script setup>', `<script setup>\n${importComponents}`);
+    return withComponentCode.replace('<script setup>', `<script setup>\n${aliasPage}`);
   }
 
 

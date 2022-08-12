@@ -5,6 +5,7 @@ import { resolveOptions } from './options';
 import type { Options } from './types';
 import demo from "./demo";
 import api from "./api";
+import path from 'path';
 
 export const VitePluginMarkdown = (userOptions: Options = {}): Plugin => {
   const options = resolveOptions(userOptions);
@@ -27,7 +28,8 @@ export const VitePluginMarkdown = (userOptions: Options = {}): Plugin => {
         raw = findAPIAndReplace(raw);
         findDemo(raw);
         const code = markdownToVue(id, raw);
-        return insertImport(code);
+        const fileName = path.basename(id).split('.')[0];
+        return insertImport(code, fileName);
       } catch (e: any) {
         this.error(e)
       }

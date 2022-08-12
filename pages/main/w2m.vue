@@ -65,6 +65,11 @@
   </div>
 </template>
 
+<script setup>
+import { definePageMeta } from "#imports";
+
+definePageMeta({ alias: '/w2m' });
+</script>
 
 <style lang="scss" scoped>
 
