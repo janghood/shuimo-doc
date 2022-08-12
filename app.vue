@@ -1,12 +1,12 @@
 <template>
   <div class="shuimo-ui m-cursor">
     <Title>水墨UI</Title>
-    <div class="layout">
+    <m-rice-paper class="layout">
       <BaseHeaderBase :show-index-button="showIndexButton"/>
       <NuxtLayout>
         <NuxtPage/>
       </NuxtLayout>
-    </div>
+    </m-rice-paper>
   </div>
 </template>
 
