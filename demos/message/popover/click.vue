@@ -3,7 +3,7 @@
     <m-button text="将毛笔移入试试" @click="showDialog"/>
     <template #content>
       <div>
-        <div>嗨嗨嗨！大侠别来无恙！</div>
+        <div>君不见，黄河之水天上来</div>
         <div style="text-align: right; margin: 0">
           <m-button text="关闭" @click="closeDialog"></m-button>
           <m-button text="确定" @click="closeDialog"></m-button>

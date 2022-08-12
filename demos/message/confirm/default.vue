@@ -7,7 +7,7 @@ import { MConfirm, MPrinter } from "shuimo-ui";
 
 const showConfirm = async () => {
   const res = await MConfirm({
-    content: '嗨嗨嗨！大侠别来无恙！'
+    content: '君不见，黄河之水天上来'
   });
   MPrinter('水墨确认组件').info(res);
 }

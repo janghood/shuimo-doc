@@ -1,7 +1,7 @@
 <template>
   <m-button @click="showDialog">点击显示弹窗</m-button>
   <m-dialog @close="closeDialog" :visible="visible" :mask="{show:false}">
-    <span>嗨嗨嗨！大侠别来无恙！</span>
+    <span>君不见，黄河之水天上来</span>
   </m-dialog>
 </template>
 
