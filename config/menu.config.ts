@@ -27,6 +27,7 @@ export const menu: MenuTypeArr = [
       { title: '选择框', key: 'select', isActive: false },
       { title: '日期选择框', key: 'datePicker', isActive: false },
       { title: '列表', key: 'list', isActive: false },
+      { title: '标签', key: 'tag', isActive: false },
     ]
   },
   {
