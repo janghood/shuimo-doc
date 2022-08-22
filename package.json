@@ -15,7 +15,7 @@
   ],
   "devDependencies": {
     "@higuaifan/rollup-plugin-fontmin": "^0.0.3",
-    "@janghood/api-extractor": "0.0.1-alpha.6",
+    "@janghood/api-extractor": "0.0.1-alpha.7",
     "nuxt": "3.0.0-rc.8",
     "sass": "^1.54.4",
     "typescript": "^4.7.4",
@@ -23,6 +23,6 @@
   },
   "dependencies": {
     "prismjs": "^1.28.0",
-    "shuimo-ui": "^0.2.4"
+    "shuimo-ui": "^0.2.5"
   }
 }
