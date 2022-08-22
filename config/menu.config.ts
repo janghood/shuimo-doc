@@ -55,6 +55,7 @@ export const menu: MenuTypeArr = [
       { title: '分割线', key: 'divider', isActive: false },
       { title: '进度条', key: 'progress', isActive: false },
       { title: '边框', key: 'border', isActive: false },
+      { title: '滚动条', key: 'scroll', isActive: false },
     ]
   }
 ]
