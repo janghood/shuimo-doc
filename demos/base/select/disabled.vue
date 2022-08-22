@@ -1,5 +1,5 @@
 <template>
-  <m-select v-model="value" :options="['子', '丑', '寅', '卯']"/>
+  <m-select v-model="value" :options="['子', '丑', '寅', '卯']" disabled/>
 </template>
 
 <script setup lang="ts">

@@ -1,8 +1,9 @@
 <template>
-  <m-select v-model="value" :options="['子', '丑', '寅', '卯']"/>
+  <m-select v-model="value" :options="['子', '丑', '寅', '卯']" :input-readonly="false"/>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
+
 const value = ref('子');
 </script>
