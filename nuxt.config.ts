@@ -4,7 +4,6 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
   css: [
     '@/assets/style/index.scss',
-    'shuimo-ui/dist/style.css'
   ],
   extensions: ['.md'],
   modules: ['./modules/markdown', './modules/fontmin',]

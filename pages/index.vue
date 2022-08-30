@@ -1,7 +1,7 @@
 <template>
   <div>
     <main class="entry-main">
-      <ComponentDialog/>
+      <LazyEntryComponentDialog/>
     </main>
     <footer>
       <a class="m-cursor-pointer" href="https://beian.miit.gov.cn" target="_blank">浙ICP备15017406号-2</a>
@@ -18,7 +18,7 @@
  *
  * 公司的业务千篇一律，复杂的代码好几百行。
  */
-import ComponentDialog from '@/components/entry/ComponentDialog.vue';
+
 
 definePageMeta({
   layout: 'without-menu'
