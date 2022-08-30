@@ -56,6 +56,7 @@ export const menu: MenuTypeArr = [
       { title: '进度条', key: 'progress', isActive: false },
       { title: '边框', key: 'border', isActive: false },
       { title: '滚动条', key: 'scroll', isActive: false },
+      { title: '加载', key: 'loading', isActive: false },
     ]
   }
 ]
