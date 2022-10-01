@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink class="header-button m-cursor-pointer" :to="url">
+  <NuxtLink class="header-button m-cursor-pointer" :to="url" :target="target">
     <slot></slot>
   </NuxtLink>
 </template>
@@ -15,8 +15,9 @@
  */
 
 const props = defineProps<{
-  url: string
-}>()
+  url: string,
+  target?: string
+}>();
 
 </script>
 

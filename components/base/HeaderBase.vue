@@ -5,7 +5,9 @@
     </div>
     <HeaderButton v-if="showIndexButton" :url="'/'">回到首页</HeaderButton>
     <HeaderButton v-if="!showIndexButton" :url="'/main'">进入组件</HeaderButton>
-<!--    <HeaderButton @click="toGeekjx">极客江湖</HeaderButton>-->
+    <HeaderButton :url="'https://github.com/janghood/shuimo-ui'" target="_blank">
+      代码仓库
+    </HeaderButton>
     <div class="header-line"/>
   </header>
 </template>
