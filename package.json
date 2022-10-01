@@ -14,15 +14,15 @@
     "modules/markdownLib"
   ],
   "devDependencies": {
-    "@higuaifan/rollup-plugin-fontmin": "^0.0.3",
+    "@higuaifan/rollup-plugin-fontmin": "^0.0.4",
     "@janghood/api-extractor": "0.0.1-alpha.7",
-    "nuxt": "3.0.0-rc.8",
-    "sass": "^1.54.4",
-    "typescript": "^4.7.4",
-    "vue": "^3.2.37"
+    "nuxt": "3.0.0-rc.11",
+    "sass": "^1.55.0",
+    "typescript": "^4.8.4",
+    "vue": "^3.2.40"
   },
   "dependencies": {
-    "prismjs": "^1.28.0",
+    "prismjs": "^1.29.0",
     "shuimo-ui": "^0.2.6"
   }
 }
