@@ -55,7 +55,7 @@ const toGeekjx = () => {
     font-size: 24px;
     color: white;
     text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.7);
-    font-family: wljh, serif;
+    font-family: var(--wljh);
   }
 }
 

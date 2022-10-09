@@ -24,6 +24,10 @@ a {
   src: url(/fonts/wljh.ttf);
 }
 
+:root {
+  --wljh: wljh, PingFangSC-Regular, sans-serif;
+}
+
 .shuimo-ui {
   height: 100vh;
   width: 100vw;
@@ -33,7 +37,7 @@ a {
 }
 
 .m-menu {
-  font-family: wljh, serif;
+  font-family: var(--wljh);
   letter-spacing: 2px;
 }
 

@@ -33,7 +33,7 @@ const props = defineProps<{
 
   font-size: 24px;
   line-height: 80px;
-  font-family: wljh, serif;
+  font-family: var(--wljh);
   color: #222222;
   letter-spacing: -4px;
   text-shadow: 1px 2px 0 #ffffff;

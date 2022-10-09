@@ -1,0 +1,11 @@
+{
+  "name": "fontmin",
+  "version": "1.0.0",
+  "scripts": {
+    "replace": "ts-node ./replaceFileSize.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.8.3",
+    "ts-node": "^10.9.1"
+  }
+}

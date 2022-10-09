@@ -6,9 +6,10 @@
   "private": true,
   "scripts": {
     "dev": "nuxt dev --port 8513",
-    "build": "jh-api && nuxt build",
-    "build:start": "nuxt build && node .output/server/index.mjs",
-    "jh-api": "jh-api"
+    "build": "jh-api && nuxt build && npm run fontmin",
+    "build:start": "npm run build && node .output/server/index.mjs",
+    "jh-api": "jh-api",
+    "fontmin": "cd ./script/fontmin && npm run replace"
   },
   "workspaces": [
     "modules/markdownLib"

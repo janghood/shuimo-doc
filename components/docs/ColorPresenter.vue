@@ -51,7 +51,7 @@ const copy = () => {
   background: v-bind(colorValue);
   color: v-bind(fontColor);
   text-align: center;
-  font-family: wljh, serif;
+  font-family: var(--wljh);
   font-size: v-bind(fontSize);
   line-height: 100px;
   writing-mode: vertical-lr;
