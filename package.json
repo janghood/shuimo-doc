@@ -24,6 +24,6 @@
   },
   "dependencies": {
     "prismjs": "^1.29.0",
-    "shuimo-ui": "^0.2.6"
+    "shuimo-ui": "^0.2.7"
   }
 }
