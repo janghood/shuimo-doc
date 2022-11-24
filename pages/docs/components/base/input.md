@@ -12,6 +12,10 @@
 
 ::: demo base/input/placeholder
 
+### 禁用
+
+::: demo base/input/disabled
+
 ### 参数
 
 ::: demo base/input/value
