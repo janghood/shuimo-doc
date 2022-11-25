@@ -21,7 +21,7 @@ export const DOMTokenListToArray = (list: DOMTokenList | HTMLCollection) => {
     array.push(list[i]);
   }
   return array;
-}
+};
 
 /**
  * 获取dom的像素数值
@@ -41,33 +41,33 @@ const calNumber = (d: number) => Math.log1p(d);
 type DomInfoType = {
   dom: HTMLElement,
   height: number,
-  width: number,
+  width: number
 };
 
 
-export default function useMouseMove(elementId: string, offset: number = 1){
+export default function useMouseMove(elementId: string, offset = 1) {
   let domList: Array<DomInfoType> = [];
 
   const moveFunc = (e: MouseEvent) => {
-    let x = calNumber(e.clientX / document.body.offsetWidth);
-    let y = calNumber(e.clientY / document.body.offsetHeight);
+    const x = calNumber(e.clientX / document.body.offsetWidth);
+    const y = calNumber(e.clientY / document.body.offsetHeight);
     if (domList) {
       domList.map(e => {
         const d = e.dom;
         d.style.top = `${x * offset}px`;
         d.style.left = `${y * offset / e.width * 500}px`;
-      })
+      });
 
     }
   };
 
   const init = () => {
     window.addEventListener('mousemove', moveFunc);
-  }
+  };
 
   const remove = () => {
     window.removeEventListener('mousemove', moveFunc);
-  }
+  };
 
   onMounted(() => {
     const baseDom = document.getElementById(elementId);
@@ -77,8 +77,8 @@ export default function useMouseMove(elementId: string, offset: number = 1){
         return {
           dom: d,
           height: getStyleNumber(d, 'height'),
-          width: getStyleNumber(d, 'width'),
-        }
+          width: getStyleNumber(d, 'width')
+        };
       });
     }
 
@@ -87,9 +87,9 @@ export default function useMouseMove(elementId: string, offset: number = 1){
 
   onUnmounted(() => {
     remove();
-  })
+  });
 
   return {
     init
-  }
+  };
 }

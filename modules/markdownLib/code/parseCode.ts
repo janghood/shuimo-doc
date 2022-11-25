@@ -46,16 +46,16 @@ const highlight = (code: string, type: highlightType) => {
 
 export const resetCode = (code: string) => {
   const templateList = code.split('<template>'); // 为了获取最前面的<template>
-  const [preTemplate, ...endTemplate] = templateList;
+  const [, ...endTemplate] = templateList;
   const data = endTemplate.join('<template>');
   const leftTemplateList = data.split('</template>');
   const leftTemplateListTemp = leftTemplateList.concat(); // 备份
   const leftTemplateListPre = leftTemplateListTemp.splice(-1, 1); //后面</template>前的内容
 
-  const left = leftTemplateListPre.join('</template>');
-  const template = leftTemplateListTemp.join('</template>');
+  leftTemplateListPre.join('</template>');
+  leftTemplateListTemp.join('</template>');
 
-  let temp = highlight(code, highlightType.vue);
+  const temp = highlight(code, highlightType.vue);
   return `<pre class="language-vue"><code ref="element">${temp}</code></pre>`;
 }
 

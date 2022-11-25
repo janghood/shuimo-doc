@@ -9,20 +9,24 @@
     "build": "jh-api && nuxt build && npm run fontmin",
     "build:start": "npm run build && node .output/server/index.mjs",
     "jh-api": "jh-api",
-    "fontmin": "cd ./script/fontmin && npm run replace"
+    "fontmin": "cd ./script/fontmin && npm run replace",
+    "prepare": "jhlint install",
+    "lint": "jhlint"
   },
   "workspaces": [
     "modules/markdownLib"
   ],
   "devDependencies": {
     "@higuaifan/rollup-plugin-fontmin": "^0.0.4",
-    "@janghood/api-extractor": "0.0.1-alpha.7",
-    "nuxt": "3.0.0-rc.11",
-    "sass": "^1.55.0",
-    "typescript": "^4.8.4",
-    "vue": "^3.2.40"
+    "@janghood/api-extractor": "0.0.1-alpha.8",
+    "nuxt": "3.0.0",
+    "sass": "^1.56.1",
+    "typescript": "^4.9.3",
+    "vue": "^3.2.45"
   },
   "dependencies": {
+    "@janghood/config": "^0.0.1-1",
+    "@janghood/lint": "^0.0.1-6",
     "prismjs": "^1.29.0",
     "shuimo-ui": "^0.2.7"
   }

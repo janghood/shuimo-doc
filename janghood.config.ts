@@ -6,7 +6,7 @@
  *
  * 江湖的业务千篇一律，复杂的代码好几百行。
  */
-import { defineJhConfig } from "@janghood/api-extractor";
+import { defineJhConfig } from '@janghood/config';
 
 
 export default defineJhConfig({
@@ -20,5 +20,13 @@ export default defineJhConfig({
         active: true
       }
     }
+  },
+  lint: {
+    eslint: {
+      nuxt: true,
+      include: ['**/*.{vue,ts,tsx,d.ts}'],
+      exclude: ['**/assets/**', '**/basic/**', '**/node_modules/**'],
+    },
+    commitlint: true
   }
 });

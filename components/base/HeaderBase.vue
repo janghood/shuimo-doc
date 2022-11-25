@@ -21,16 +21,11 @@
  *
  * 公司的业务千篇一律，复杂的代码好几百行。
  */
-import HeaderButton from '@/components/base/HeaderButton.vue'
+import HeaderButton from '@/components/base/HeaderButton.vue';
 
-const props = defineProps({
+defineProps({
   showIndexButton: { type: Boolean, default: true }
-})
-
-const router = useRouter();
-const toGeekjx = () => {
-  window.open('https://www.geekjx.com');
-}
+});
 </script>
 
 <style lang="scss" scoped>

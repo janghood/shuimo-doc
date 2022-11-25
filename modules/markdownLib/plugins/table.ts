@@ -6,8 +6,8 @@
  *
  * 江湖的业务千篇一律，复杂的代码好几百行。
  */
-import type { RuleBlock } from "markdown-it/lib/parser_block";
-import StateBlock from "markdown-it/lib/rules_block/state_block";
+import type { RuleBlock } from 'markdown-it/lib/parser_block';
+import StateBlock from 'markdown-it/lib/rules_block/state_block';
 
 function isSpace(code: number) {
   switch (code) {
@@ -26,13 +26,9 @@ function getLine(state: StateBlock, line: number) {
 }
 
 function escapedSplit(str: string) {
-  let result = [],
-    pos = 0,
-    max = str.length,
-    ch,
-    isEscaped = false,
-    lastPos = 0,
-    current = '';
+  const result = [], max = str.length;
+
+  let ch, pos = 0, current = '', lastPos = 0, isEscaped = false;
 
   ch = str.charCodeAt(pos);
 
@@ -63,9 +59,9 @@ function escapedSplit(str: string) {
 
 
 export const table: RuleBlock = (state, startLine, endLine, silent) => {
-  let nextLine, pos, firstCh, secondCh, ch, lineText, columns, aligns, i, t,
-    columnCount, oldParentType, tableLines, l, terminate, tbodyLines;
+  let nextLine, pos, ch, lineText, columns, i, t, tableLines, l, terminate, tbodyLines;
   let token: any;
+
 
   // should have at least two lines
   if (startLine + 2 > endLine) { return false; }
@@ -84,12 +80,12 @@ export const table: RuleBlock = (state, startLine, endLine, silent) => {
   pos = state.bMarks[nextLine] + state.tShift[nextLine];
   if (pos >= state.eMarks[nextLine]) { return false; }
 
-  firstCh = state.src.charCodeAt(pos++);
+  const firstCh = state.src.charCodeAt(pos++);
   if (firstCh !== 0x7C/* | */ && firstCh !== 0x2D/* - */ && firstCh !== 0x3A/* : */) { return false; }
 
   if (pos >= state.eMarks[nextLine]) { return false; }
 
-  secondCh = state.src.charCodeAt(pos++);
+  const secondCh = state.src.charCodeAt(pos++);
   if (secondCh !== 0x7C/* | */ && secondCh !== 0x2D/* - */ && secondCh !== 0x3A/* : */ && !isSpace(secondCh)) {
     return false;
   }
@@ -109,7 +105,7 @@ export const table: RuleBlock = (state, startLine, endLine, silent) => {
   lineText = getLine(state, startLine + 1);
 
   columns = lineText.split('|');
-  aligns = [];
+  const aligns = [];
   for (i = 0; i < columns.length; i++) {
     t = columns[i].trim();
     if (!t) {
@@ -141,11 +137,11 @@ export const table: RuleBlock = (state, startLine, endLine, silent) => {
 
   // header row will define an amount of columns in the entire table,
   // and align row should be exactly the same (the rest of the rows can differ)
-  columnCount = columns.length;
+  const columnCount = columns.length;
   if (columnCount === 0 || columnCount !== aligns.length) { return false; }
 
   if (silent) { return true; }
-  oldParentType = state.parentType;
+  const oldParentType = state.parentType;
   state.parentType = 'wTable' as any;
 
   const terminatorRules = state.md.block.ruler.getRules('blockquote');
@@ -269,4 +265,4 @@ export const table: RuleBlock = (state, startLine, endLine, silent) => {
   state.parentType = oldParentType;
   state.line = nextLine;
   return true;
-}
+};

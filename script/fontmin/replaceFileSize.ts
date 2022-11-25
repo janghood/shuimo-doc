@@ -15,7 +15,7 @@ const s = fs.statSync('../../.output/public/fonts/wljh.ttf');
 
 fs.readFile('../../.output/server/chunks/nitro/node-server.mjs', (err, data) => {
   let str = data.toString();
-  let info = str.match(/\/fonts\/wljh.ttf[^}]*/);
+  const info = str.match(/\/fonts\/wljh.ttf[^}]*/);
   if (info) {
     const newInfo = info[0].replace('"size": 20725112', `"size": ${s.size}`);
     str = str.replaceAll(/\/fonts\/wljh.ttf[^}]*/g, newInfo);

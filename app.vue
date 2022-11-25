@@ -2,7 +2,7 @@
   <div class="shuimo-ui m-cursor">
     <Title>水墨UI</Title>
     <Loading v-if="isLoading" v-model="isLoading"/>
-    <m-rice-paper class="layout" v-else>
+    <m-rice-paper v-else class="layout">
       <BaseHeaderBase :show-index-button="showIndexButton"/>
       <NuxtLayout>
         <NuxtPage/>
@@ -13,15 +13,12 @@
 
 
 <script setup lang="ts">
-import { ref } from "vue";
-
 const route = useRoute();
 const showIndexButton = computed(() => {
   return route.path !== '/';
 });
 
 const isLoading = ref(true);
-
 
 useHead({
   meta: [

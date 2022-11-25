@@ -17,7 +17,7 @@
 import { onMounted } from "vue";
 
 
-const props = defineProps<{ modelValue:boolean }>();
+defineProps<{ modelValue:boolean }>();
 const emits =defineEmits(['update:modelValue']);
 
 
