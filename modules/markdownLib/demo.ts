@@ -49,9 +49,8 @@ export default function demo() {
         return '';
       })
     const importComponents = Array(...importMap.values()).join('\n');
-    const aliasPage = `${importComponents};\n import { definePageMeta } from "#imports";\n definePageMeta({ alias:'/${fileName}' })`;
     // 往setup里添加import
-    return withComponentCode.replace('<script setup>', `<script setup>\n${aliasPage}`);
+    return withComponentCode.replace('<script setup>', `<script setup>\n${importComponents}`);
   }
 
 
