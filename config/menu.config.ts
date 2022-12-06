@@ -12,7 +12,7 @@ import type { MenuTypeArr } from "shuimo-ui";
 export const menu: MenuTypeArr = [
   {
     title: '首页', key: 'main', isActive: true, children: [
-      { title: '快速开始', key: 'main/quickStart', isActive: false },
+      { title: '快速开始', key: 'quickStart', isActive: false },
       { title: '颜色', key: 'color', isActive: false },
       { title: '从wash-painting升级', key: 'w2m', isActive: false },
     ]

@@ -10,6 +10,17 @@ import type { RouterConfig } from '@nuxt/schema';
 
 export default <RouterConfig>{
   routes: (routes) => {
+
+    // quickStart
+    const main = routes.find(route=>route.path==='/main');
+    if(main&&main.children){
+      const quickStart = main.children.find(c=>c.path==='quickStart');
+      if(quickStart){
+        quickStart.alias = '/quickStart';
+      }
+    }
+
+    // 如果是doc
     const docsRoute = routes.find(r => r.name === 'docs');
     if (!docsRoute || !docsRoute.children) {return routes;}
     const docsComponents = docsRoute.children.find(r => r.name === 'docs-components');
