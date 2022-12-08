@@ -12,6 +12,7 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  font-family: PingFang SC, Microsoft YaHei;
 }
 
 a {
@@ -25,7 +26,7 @@ a {
 }
 
 :root {
-  --wljh: wljh, PingFangSC-Regular, sans-serif;
+  --wljh: wljh, PingFangSC;
 }
 
 .shuimo-ui {
