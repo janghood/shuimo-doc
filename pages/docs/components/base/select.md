@@ -10,9 +10,16 @@
 
 ### readonly
 
-_参数匹配部分开发中_
+当`input-readonly="false"`时，开启查询功能
 
 ::: demo base/select/readonly
+
+### readonly - filter
+
+当`input-readonly="false"`时，且查询数据的功能不符合您的需求时
+可通过自定义方法`filter`进行数据的匹配
+
+::: demo base/select/readonlyFilter
 
 ### disabled
 
@@ -25,6 +32,10 @@ _参数匹配部分开发中_
 ### option插槽
 
 ::: demo base/select/optionSlot
+
+### multiple多选
+
+::: demo base/select/multiple
 
 ## API
 
