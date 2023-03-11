@@ -8,7 +8,7 @@
 <script setup lang="ts">
 
 import { ref } from "vue";
-import { MPrinter } from "shuimo-ui";
+import {  MUpload, MPrinter  } from "shuimo-ui";
 
 const file = ref({
   name: ''
